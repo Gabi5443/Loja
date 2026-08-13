@@ -12,6 +12,7 @@ export default function RootLayout() {
                     borderTopWidth: 0.5,
                     height: 60,
                     paddingBottom: 8,
+                    borderRadius: 10,
                 },
                 tabBarActiveTintColor: '#f04a4aff',
                 tabBarInactiveTintColor: '#8e8e93',
