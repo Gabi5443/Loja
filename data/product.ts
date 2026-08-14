@@ -1,7 +1,41 @@
-export const products = [
-  { id: "1", name: "Vestido Maxi Floral Azul e Branco Elegante com Decote em V", description: "Eleve seu visual de verão com este deslumbrante vestido maxi. Com uma estampa floral azul vibrante sobre um fundo branco nítido, este vestido emana sofisticação e feminilidade. O design de alças finas e o decote em V profundo valorizam o colo, enquanto a cintura marcada cria uma silhueta alongada e lisonjeira. Perfeito para festas no jardim, casamentos ao ar livre ou jantares à beira-mar. Combine com sandálias de tiras ou plataformas para um visual completo." },
-  { id: "2", name: "Calça Cargo Feminina Preta Multibolsos Ripstop", description: "Eleve o seu visual do dia a dia com a nossa Calça Cargo Feminina Preta. Unindo funcionalidade, conforto e uma forte pegada streetwear, esta peça é perfeita para quem busca praticidade sem abrir mão do estilo. Confeccionada em tecido de alta durabilidade e caimento estruturado, ela conta com bolsos cargo laterais funcionais com lapela, além de bolsos faca frontais, oferecendo espaço de sobra para carregar seus essenciais com segurança. Sua modelagem reta garante liberdade de movimento e versatilidade na hora de compor os looks." },
-  { id: "3", name: "Jaqueta Jeans Oversized Off-White de Sarja", description: "Sabe aquela terceira peça perfeita para elevar qualquer look? A nossa Jaqueta Jeans Off-White combina um design moderno com a versatilidade do tom neutro. Com modelagem ampla e ombros levemente deslocados, ela traz uma proposta casual chique super atual. Confeccionada em sarja 100% algodão de alta qualidade, possui caimento encorpado, gola tradicional, fechamento por botões contrastantes e pregas sutis nas mangas que conferem um charme extra ao visual. É a peça curinga para sobrepor em dias mais amenos com muito estilo." },
-  { id: "4", name: "Calça Jeans Feminina Wide Leg Cintura Alta", description: "O equilíbrio perfeito entre o clássico e o moderno! A nossa Calça Jeans Wide Leg é a peça curinga que não pode faltar no seu guarda-roupa. Com modelagem de pernas amplas e cintura alta bem marcada, ela valoriza a silhueta, alonga as pernas e oferece um caimento impecável. Confeccionada em jeans de alta qualidade com lavagem azul média versátil, ela possui acabamento em barra desfeita/desfiada que adiciona um toque urbano e despretensioso ao visual. Ideal para transitar facilmente de um look casual de trabalho até um compromisso no fim de semana." },
-  { id: "5", name: "Top Frente Única Poá Off-White com Decote V", description: "Leve, charmoso e cheio de personalidade, o nosso Top Frente Única Poá é a escolha perfeita para criar looks de verão com uma pegada retrô e estilosa. A estampa de bolinhas (poá) em preto sobre o fundo off-white traz aquele toque vintage atemporal que nunca sai de moda. Confeccionado em malha leve com excelente elasticidade, possui modelagem halter neck (frente única com amarração no pescoço), decote V profundo com leve franzido no busto e caimento ajustado ao corpo. É uma peça fresca e ideal para os dias mais quentes." },
+import { ImageSourcePropType } from 'react-native';
+
+export type Product = {
+  id: string;
+  name: string;
+  image: ImageSourcePropType;
+  description: string;
+};
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Vestido Maxi Floral Azul e Branco Elegante com Decote em V",
+    image: require("../assets/image1.jpg"),
+    description: "Eleve seu visual de verão com este deslumbrante vestido maxi. Com uma estampa floral azul vibrante sobre um fundo branco nítido, este vestido emana sofisticação e feminilidade. O design de alças finas e o decote em V profundo valorizam o colo, enquanto a cintura marcada cria uma silhueta alongada e lisonjeira. Perfeito para festas no jardim, casamentos ao ar livre ou jantares à beira-mar. Combine com sandálias de tiras ou plataformas para um visual completo."
+  },
+  {
+    id: "2",
+    name: "Calça Cargo Feminina Preta Multibolsos Ripstop",
+    image: require("../assets/image2.png"),
+    description: "Eleve o seu visual do dia a dia com a nossa Calça Cargo Feminina Preta. Unindo funcionalidade, conforto e uma forte pegada streetwear, esta peça é perfeita para quem busca praticidade sem abrir mão do estilo. Confeccionada em tecido de alta durabilidade e caimento estruturado, ela conta com bolsos cargo laterais funcionais com lapela, além de bolsos faca frontais, oferecendo espaço de sobra para carregar seus essenciais com segurança. Sua modelagem reta garante liberdade de movimento e versatilidade na hora de compor os looks."
+  },
+  {
+    id: "3",
+    name: "Jaqueta Jeans Oversized Off-White de Sarja",
+    image: require("../assets/image3.png"),
+    description: "Sabe aquela terceira peça perfeita para elevar qualquer look? A nossa Jaqueta Jeans Off-White combina um design moderno com a versatilidade do tom neutro. Com modelagem ampla e ombros levemente deslocados, ela traz uma proposta casual chique super atual. Confeccionada em sarja 100% algodão de alta qualidade, possui caimento encorpado, gola tradicional, fechamento por botões contrastantes e pregas sutis nas mangas que conferem um charme extra ao visual. É a peça curinga para sobrepor em dias mais amenos com muito estilo."
+  },
+  {
+    id: "4",
+    name: "Calça Jeans Feminina Wide Leg Cintura Alta",
+    image: require("../assets/image4.jpg"),
+    description: "O equilíbrio perfeito entre o clássico e o moderno! A nossa Calça Jeans Wide Leg é a peça curinga que não pode faltar no seu guarda-roupa. Com modelagem de pernas amplas e cintura alta bem marcada, ela valoriza a silhueta, alonga as pernas e oferece um caimento impecável. Confeccionada em jeans de alta qualidade com lavagem azul média versátil, ela possui acabamento em barra desfeita/desfiada que adiciona um toque urbano e despretensioso ao visual. Ideal para transitar facilmente de um look casual de trabalho até um compromisso no fim de semana."
+  },
+  {
+    id: "5",
+    name: "Top Frente Única Poá Off-White com Decote V",
+    image: require("../assets/image5.png"),
+    description: "Leve, charmoso e cheio de personalidade, o nosso Top Frente Única Poá é a escolha perfeita para criar looks de verão com uma pegada retrô e estilosa. A estampa de bolinhas (poá) em preto sobre o fundo off-white traz aquele toque vintage atemporal que nunca sai de moda. Confeccionado em malha leve com excelente elasticidade, possui modelagem halter neck (frente única com amarração no pescoço), decote V profundo com leve franzido no busto e caimento ajustado ao corpo. É uma peça fresca e ideal para os dias mais quentes."
+  },
 ]

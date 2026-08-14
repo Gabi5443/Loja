@@ -1,10 +1,13 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import Feather from '@expo/vector-icons/Feather';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Index() {
     return (
         <View style={styles.all}>
             <View style={styles.topicon}>
+                <AntDesign name="menu" size={24} color="black" />
+                <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Carrinho</Text>
                 <Feather name="more-horizontal" size={30} color="black"/>
             </View>
 
@@ -25,8 +28,10 @@ const styles = StyleSheet.create({
 
     },
     topicon: {
-        alignItems: 'flex-end',
-        margin: '4%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 16,
+        marginTop: 20,
     },
 
     resto: {
