@@ -1,6 +1,7 @@
 import { Tabs } from "expo-router";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Feather from '@expo/vector-icons/Feather';
+import { View } from 'react-native';
 
 export default function RootLayout() {
     return (
@@ -18,31 +19,42 @@ export default function RootLayout() {
                 tabBarInactiveTintColor: '#8e8e93',
             }}
         >
-            <Tabs.Screen 
+            <Tabs.Screen
                 name="index"
                 options={{
-                     title: "home",
-                     tabBarIcon: ({ color, size }) => (
-                    <Ionicons name="home-outline" size={size} color={color} />
-                     )
-                    }} 
-                />
-            <Tabs.Screen 
+                    title: "Home",
+                    tabBarIcon: ({ color, size }) => (
+                        <Ionicons name="home-outline" size={size} color={color} />
+                    )
+                }}
+            />
+
+            <Tabs.Screen
+                name="vender"
+                options={{
+                    title: 'Vender',
+                    tabBarIcon: ({ size }) => (
+                        <View style={{
+                            backgroundColor: '#f04a4aff',
+                            padding: 8,
+                            borderRadius: 20, 
+                            alignItems: 'center',
+                            marginTop: -20, 
+                        }}>
+                            <Ionicons name="scan" size={size} color="#ffffff" />
+                        </View>
+                    ),
+                }}
+            />
+            <Tabs.Screen
                 name="index_carrinho"
-                options={{ 
-                    title: "carrinho", 
+                options={{
+                    title: "Carrinho",
                     tabBarIcon: ({ color, size }) => (
-                    <Feather name="shopping-cart" size={size} color={color} />
+                        <Feather name="shopping-cart" size={size} color={color} />
                     )
-                     }} />
-            <Tabs.Screen 
-                name="index_perfil"
-                options={{ 
-                    title: "perfil",
-                    tabBarIcon: ({ color, size }) => (
-                    <Ionicons name="person-outline" size={size} color={color} />
-                    )
-                 }} />
+                }} />
+
         </Tabs >
 
     )

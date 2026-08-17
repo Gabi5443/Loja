@@ -22,7 +22,7 @@ export default function Index() {
                         <Text style={styles.searchtext}> Pesquisar</Text>
                     </View>
                     <View style={styles.filterbottom}>
-                        <Ionicons name="options-outline" size={24} color="black" />
+                        <Ionicons name="options-outline" size={24} color="#fff" />
                     </View>
                 </View>
 
@@ -37,10 +37,8 @@ export default function Index() {
                                     source={product.image}
                                     style={styles.productImage}
                                 />
-                                
-                                    <Text style={{fontWeight: 'bold'}}>{product.name}</Text>
-                                    <Text style={styles.buyButtom}>Comprar</Text>
-                                
+                                <Text style={{fontWeight: 'bold'}}>{product.name}</Text>
+                                <Text style={styles.buyButtom}>Comprar</Text>
                             </View>
                         </Pressable>
                     ))}
@@ -111,7 +109,9 @@ const styles = StyleSheet.create({
         padding: 7,
         backgroundColor: "#f04a4aff",
         borderRadius: 10,
-        marginRight: 5
+        marginRight: 5,
+        color: '#fff',
+        fontWeight: 'bold',
     },
 
     
